@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <input
+      type="text"
+      id="searchInput"
+      onkeyup="searchData()"
+      placeholder="Cari berdasarkan NIM atau Nama..."
+    />
+
+    <title>Contoh Tabel HTML dengan Formulir Input</title>
+  </head>
+  <body>
+    <button id="toggleButton">Input With Barcode</button>
+    <video id="video-preview" autoplay style="display: none"></video>
+
+    <h2>Data Sistem Manajemen Peminjaman Buku</h2>
+    <h2>Perpustakaan A Fahmi Abdillah</h2>
+
+    <form>
+      <label for="nim">NIM:</label>
+      <input type="text" id="nim" name="nim" required />
+
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required />
+
+      <label for="jurusan">Jurusan:</label>
+      <input type="text" id="jurusan" name="jurusan" required />
+
+      <label for="jurusan">Judul :</label>
+      <input type="text" id="judul" name="judul" required />
+
+      <label for="jurusan">TPinjam:</label>
+      <input type="text" id="pinjam" name="pinjam" required />
+
+      <label for="jurusan">TBalik:</label>
+      <input type="text" id="balik" name="balik" required />
+    </form>
+    <button type="button" onclick="addData()">Tambah Data</button>
+    <button type="button" onclick="downloadTable()">Unduh Tabel</button>
+
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>NIM</th>
+          <th>Nama</th>
+          <th>Jurusan</th>
+          <th>Judul Buku</th>
+          <th>Tanggal Peminjaman</th>
+          <th>Tanggal Pengembalian</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data akan ditambahkan secara dinamis melalui JavaScript -->
+      </tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
